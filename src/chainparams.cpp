@@ -108,6 +108,53 @@ static const Checkpoints::CCheckpointData dataRegtest = {
         0
     };
 
+
+/*
+// -mainnet
+
+input_script: 04ffff001d01044c6554686520436f6e766572736174696f6e2031382f4a756c2f3230313620426c6f636b636861696e20746563686e6f6c6f677920636f756c6420626520612067616d65206368616e67657220666f7220646576656c6f70696e6720636f6d6d756e6974696573
+algorithm: X11
+merkle hash: a442938ed81c7c1df8ebe7e97b4adc6456710c2ae104d8955f947ddcba1e49e3
+pszTimestamp: The Conversation 18/Jul/2016 Blockchain technology could be a game changer for developing communities
+pubkey: 04678afdb0fe5548271967f1a67130b7105cd6a828e03909a67962e0ea1f61deb649f6bc3f4cef38c4f35504e51ec112de5c384df7ba0b8d578a4c702b6bf11d5f
+time: 1468837313
+bits: 0x1e0ffff0
+nonce: 880310
+genesis hash: 0000015c110228d3769a7e213411a4cc4b9c6c8a24eefeea833c2a599f266fd3
+
+// -Testnet
+
+input_script: 04ffff001d01044c6554686520436f6e766572736174696f6e2031382f4a756c2f3230313620426c6f636b636861696e20746563686e6f6c6f677920636f756c6420626520612067616d65206368616e67657220666f7220646576656c6f70696e6720636f6d6d756e6974696573
+algorithm: X11
+merkle hash: a442938ed81c7c1df8ebe7e97b4adc6456710c2ae104d8955f947ddcba1e49e3
+pszTimestamp: The Conversation 18/Jul/2016 Blockchain technology could be a game changer for developing communities
+pubkey: 04678afdb0fe5548271967f1a67130b7105cd6a828e03909a67962e0ea1f61deb649f6bc3f4cef38c4f35504e51ec112de5c384df7ba0b8d578a4c702b6bf11d5f
+time: 1468840512
+bits: 0x1e0ffff0
+nonce: 1801117
+genesis hash: 000009a1550a7533bfce990194655098f096c55c011e628f5604be3fff43f67c
+
+// -REGTEST
+input_script: 04ffff001d01044c6554686520436f6e766572736174696f6e2031382f4a756c2f3230313620426c6f636b636861696e20746563686e6f6c6f677920636f756c6420626520612067616d65206368616e67657220666f7220646576656c6f70696e6720636f6d6d756e6974696573
+algorithm: X11
+merkle hash: a442938ed81c7c1df8ebe7e97b4adc6456710c2ae104d8955f947ddcba1e49e3
+pszTimestamp: The Conversation 18/Jul/2016 Blockchain technology could be a game changer for developing communities
+pubkey: 04678afdb0fe5548271967f1a67130b7105cd6a828e03909a67962e0ea1f61deb649f6bc3f4cef38c4f35504e51ec112de5c384df7ba0b8d578a4c702b6bf11d5f
+time: 1468840698
+bits: 0x1e0ffff0
+nonce: 525719
+genesis hash: 00000e75b4ff10d0d382c3d01952fed471f4c2d9047d4c9a6eefb4a4aa826ad2
+
+화폐단위: CHP(CHIP)
+
+base58Prefixes[PUBKEY_ADDRESS] = list_of( 11);                    // Gamblr addresses start with 'C'
+base58Prefixes[SCRIPT_ADDRESS] = list_of( 06);                    // Gamblr script addresses start with '7'
+base58Prefixes[SECRET_KEY] =     list_of(204w);                    // Gamblr private keys start with '7' or 'C'
+base58Prefixes[EXT_PUBLIC_KEY] = list_of(35)(40)(47)(53);         // Gamblr BIP32 pubkeys start with 'chpv'
+base58Prefixes[EXT_SECRET_KEY] = list_of(35)(40)(47)(47);         // Gamblr BIP32 prvkeys start with 'chpp'
+base58Prefixes[EXT_COIN_TYPE]  = list_of(0x80000777);             // Gamblr BIP44 coin type is '777'
+*/
+
 class CMainParams : public CChainParams {
 public:
     CMainParams() {

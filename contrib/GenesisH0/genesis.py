@@ -1,3 +1,5 @@
+#!/usr/bin/env python
+
 import hashlib, binascii, struct, array, os, time, sys, optparse
 import scrypt
 
@@ -25,7 +27,9 @@ def get_args():
   parser = optparse.OptionParser()
   parser.add_option("-t", "--time", dest="time", default=int(time.time()), 
                    type="int", help="the (unix) time when the genesisblock is created")
-  parser.add_option("-z", "--timestamp", dest="timestamp", default="The Times 03/Jan/2009 Chancellor on brink of second bailout for banks",
+  #parser.add_option("-z", "--timestamp", dest="timestamp", default="The Times 03/Jan/2009 Chancellor on brink of second bailout for banks",
+  parser.add_option("-z", "--timestamp", dest="timestamp", default="The Conversation 18/Jul/2016 Blockchain technology could be a game changer for developing communities",
+
                    type="string", help="the pszTimestamp found in the coinbase of the genesisblock")
   parser.add_option("-n", "--nonce", dest="nonce", default=0,
                    type="int", help="the first value of the nonce that will be incremented when searching the genesis hash")
@@ -59,7 +63,7 @@ def create_input_script(psz_timestamp):
   if len(psz_timestamp) > 76: psz_prefix = '4c'
 
   script_prefix = '04ffff001d0104' + psz_prefix + chr(len(psz_timestamp)).encode('hex')
-  print (script_prefix + psz_timestamp.encode('hex'))
+  print ("input_script: " + script_prefix + psz_timestamp.encode('hex'))
   return (script_prefix + psz_timestamp.encode('hex')).decode('hex')
 
 
