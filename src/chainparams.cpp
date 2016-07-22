@@ -211,10 +211,10 @@ public:
         assert(hashGenesisBlock == uint256("0x0000015c110228d3769a7e213411a4cc4b9c6c8a24eefeea833c2a599f266fd3"));
         assert(genesis.hashMerkleRoot == uint256("0xa442938ed81c7c1df8ebe7e97b4adc6456710c2ae104d8955f947ddcba1e49e3"));
 
-        vSeeds.push_back(CDNSSeedData("darkcoin.io", "dnsseed.darkcoin.io"));
-        vSeeds.push_back(CDNSSeedData("darkcoin.qa", "dnsseed.darkcoin.qa"));
-        vSeeds.push_back(CDNSSeedData("masternode.io", "dnsseed.masternode.io"));
         vSeeds.push_back(CDNSSeedData("gamblr.io", "dnsseed.gamblr.io"));
+        vSeeds.push_back(CDNSSeedData("gamblr.qa", "dnsseed.gamblr.qa"));
+        //vSeeds.push_back(CDNSSeedData("masternode.io", "dnsseed.masternode.io"));
+        //vSeeds.push_back(CDNSSeedData("gamblr.io", "dnsseed.gamblr.io"));
 
         base58Prefixes[PUBKEY_ADDRESS] = list_of( 76);                    // Gamblr addresses start with 'X'
         base58Prefixes[SCRIPT_ADDRESS] = list_of( 16);                    // Gamblr script addresses start with '7'
