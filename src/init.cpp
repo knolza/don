@@ -420,7 +420,7 @@ std::string HelpMessage(HelpMessageMode mode)
     strUsage += "\n" + _("Darksend options:") + "\n";
     strUsage += "  -enabledarksend=<n>          " + strprintf(_("Enable use of automated darksend for funds stored in this wallet (0-1, default: %u)"), 0) + "\n";
     strUsage += "  -darksendrounds=<n>          " + strprintf(_("Use N separate masternodes to anonymize funds  (2-8, default: %u)"), 2) + "\n";
-    strUsage += "  -anonymizegamblramount=<n>     " + strprintf(_("Keep N CHIP anonymized (default: %u)"), 0) + "\n";
+    strUsage += "  -anonymizechipamount=<n>     " + strprintf(_("Keep N CHIP anonymized (default: %u)"), 0) + "\n";
     strUsage += "  -liquidityprovider=<n>       " + strprintf(_("Provide liquidity to Darksend by infrequently mixing coins on a continual basis (0-100, default: %u, 1=very frequent, high fees, 100=very infrequent, low fees)"), 0) + "\n";
 
     strUsage += "\n" + _("InstantX options:") + "\n";
@@ -1535,7 +1535,7 @@ bool AppInit2(boost::thread_group& threadGroup)
         nDarksendRounds = 99999;
     }
 
-    nAnonymizeDarkcoinAmount = GetArg("-anonymizegamblramount", 0);
+    nAnonymizeDarkcoinAmount = GetArg("-anonymizechipamount", 0);
     if(nAnonymizeDarkcoinAmount > 999999) nAnonymizeDarkcoinAmount = 999999;
     if(nAnonymizeDarkcoinAmount < 2) nAnonymizeDarkcoinAmount = 2;
 
