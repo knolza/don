@@ -3654,8 +3654,8 @@ https://www.transifex.com/projects/p/gamblr/</translation>
         <translation>Aviso: Por favor verifique que a data e a hora do computador está correcta! Se o relógio estiver errado o Gamblr Core não vai funcionar correctamente.</translation>
     </message>
     <message>
-        <source>(9999 could be used only on mainnet)</source>
-        <translation>(9999 apenas pode ser usado para mainnet)</translation>
+        <source>(7777 could be used only on mainnet)</source>
+        <translation>(7777 apenas pode ser usado para mainnet)</translation>
     </message>
     <message>
         <source>(default: %s)</source>
@@ -4064,8 +4064,8 @@ https://www.transifex.com/projects/p/gamblr/</translation>
         <translation>masternodeprivkey inválida. Por favor reveja a documentação.</translation>
     </message>
     <message>
-        <source>(must be 9999 for mainnet)</source>
-        <translation>(deve ser 9999 para mainnet)</translation>
+        <source>(must be 7777 for mainnet)</source>
+        <translation>(deve ser 7777 para mainnet)</translation>
     </message>
     <message>
         <source>Can't find random Masternode.</source>

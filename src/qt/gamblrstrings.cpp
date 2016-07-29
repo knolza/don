@@ -205,10 +205,10 @@ QT_TRANSLATE_NOOP("gamblr-core", ""
 QT_TRANSLATE_NOOP("gamblr-core", ""
 "You must specify a masternodeprivkey in the configuration. Please see "
 "documentation for help."),
-QT_TRANSLATE_NOOP("gamblr-core", "(9999 could be used only on mainnet)"),
+QT_TRANSLATE_NOOP("gamblr-core", "(7777 could be used only on mainnet)"),
 QT_TRANSLATE_NOOP("gamblr-core", "(default: %s)"),
 QT_TRANSLATE_NOOP("gamblr-core", "(default: 1)"),
-QT_TRANSLATE_NOOP("gamblr-core", "(must be 9999 for mainnet)"),
+QT_TRANSLATE_NOOP("gamblr-core", "(must be 7777 for mainnet)"),
 QT_TRANSLATE_NOOP("gamblr-core", "<category> can be:\n"),
 QT_TRANSLATE_NOOP("gamblr-core", "Accept command line and JSON-RPC commands"),
 QT_TRANSLATE_NOOP("gamblr-core", "Accept connections from outside (default: 1 if no -proxy or -connect)"),
