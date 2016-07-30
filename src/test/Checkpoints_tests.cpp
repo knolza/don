@@ -18,6 +18,7 @@ BOOST_AUTO_TEST_SUITE(Checkpoints_tests)
 
 BOOST_AUTO_TEST_CASE(sanity)
 {
+#if 0
     uint256 p_1 = uint256("0x000000aaf0300f59f49bc3e970bad15c11f961fe2347accffff19d96ec9778e3");
     uint256 p_2 = uint256("0x000000003b01809551952460744d5dbb8fcbd6cbae3c220267bf7fa43f837367");
     BOOST_CHECK(Checkpoints::CheckBlock(-1, p_1));
@@ -33,6 +34,7 @@ BOOST_AUTO_TEST_CASE(sanity)
     BOOST_CHECK(Checkpoints::CheckBlock(-2+1, p_1));
 
     BOOST_CHECK(Checkpoints::GetTotalBlocksEstimate() >= -2);
+#endif 
 }    
 
 BOOST_AUTO_TEST_SUITE_END()
