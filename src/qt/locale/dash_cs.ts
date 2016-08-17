@@ -4109,7 +4109,7 @@ for example: alertnotify=echo %%s | mail -s &quot;Dash Alert&quot; admin@foo.com
     </message>
     <message>
         <location filename="../dashstrings.cpp" line="127"/>
-        <source>Show N confirmations for a successfully locked transaction (0-9999, default: 1)</source>
+        <source>Show N confirmations for a successfully locked transaction (0-7777, default: 1)</source>
         <translation type="unfinished"/>
     </message>
     <message>
@@ -4703,7 +4703,7 @@ Pokud konfigurační soubor ještě neexistuje, vytvoř ho tak, aby ho mohl čí
     </message>
     <message>
         <location filename="../dashstrings.cpp" line="276"/>
-        <source>Listen for connections on &lt;port&gt; (default: 9999 or testnet: 19999)</source>
+        <source>Listen for connections on &lt;port&gt; (default: 7777 or testnet: 19999)</source>
         <translation type="unfinished"/>
     </message>
     <message>

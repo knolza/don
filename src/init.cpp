@@ -258,7 +258,7 @@ std::string HelpMessage(HelpMessageMode hmm)
     strUsage += "  -maxsendbuffer=<n>     " + _("Maximum per-connection send buffer, <n>*1000 bytes (default: 1000)") + "\n";
     strUsage += "  -onion=<ip:port>       " + _("Use separate SOCKS5 proxy to reach peers via Tor hidden services (default: -proxy)") + "\n";
     strUsage += "  -onlynet=<net>         " + _("Only connect to nodes in network <net> (IPv4, IPv6 or Tor)") + "\n";
-    strUsage += "  -port=<port>           " + _("Listen for connections on <port> (default: 9999 or testnet: 19999)") + "\n";
+    strUsage += "  -port=<port>           " + _("Listen for connections on <port> (default: 7777 or testnet: 19999)") + "\n";
     strUsage += "  -proxy=<ip:port>       " + _("Connect through SOCKS proxy") + "\n";
     strUsage += "  -seednode=<ip>         " + _("Connect to a node to retrieve peer addresses, and disconnect") + "\n";
     strUsage += "  -socks=<n>             " + _("Select SOCKS version for -proxy (4 or 5, default: 5)") + "\n";
@@ -352,7 +352,7 @@ std::string HelpMessage(HelpMessageMode hmm)
 
     strUsage += "\n" + _("InstantX options:") + "\n";
     strUsage += "  -enableinstantx=<n>    " + _("Enable instantx, show confirmations for locked transactions (bool, default: true)") + "\n";
-    strUsage += "  -instantxdepth=<n>     " + _("Show N confirmations for a successfully locked transaction (0-9999, default: 1)") + "\n";
+    strUsage += "  -instantxdepth=<n>     " + _("Show N confirmations for a successfully locked transaction (0-7777, default: 1)") + "\n";
 
     strUsage += "\n" + _("Block creation options:") + "\n";
     strUsage += "  -blockminsize=<n>      " + _("Set minimum block size in bytes (default: 0)") + "\n";
@@ -591,7 +591,7 @@ bool AppInit2(boost::thread_group& threadGroup)
 
     fBenchmark = GetBoolArg("-benchmark", false);
     mempool.setSanityCheck(GetBoolArg("-checkmempool", RegTest()));
-    Checkpoints::fEnabled = GetBoolArg("-checkpoints", true);
+    Checkpoints::fEnabled = GetBoolArg("-checkpoints", false);
 
     // -par=0 means autodetect, but nScriptCheckThreads==0 means no concurrency
     nScriptCheckThreads = GetArg("-par", DEFAULT_SCRIPTCHECK_THREADS);

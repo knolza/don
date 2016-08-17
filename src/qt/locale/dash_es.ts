@@ -4123,8 +4123,8 @@ Por ejemplo: alertnotify=echo %%s | mail -s &quot;Dash Alert&quot; admin@foo.com
     </message>
     <message>
         <location filename="../dashstrings.cpp" line="127"/>
-        <source>Show N confirmations for a successfully locked transaction (0-9999, default: 1)</source>
-        <translation>Mostrar N confirmaciones para una transacción bloqueada con éxito (0-9999, predeterminado: 1)</translation>
+        <source>Show N confirmations for a successfully locked transaction (0-7777, default: 1)</source>
+        <translation>Mostrar N confirmaciones para una transacción bloqueada con éxito (0-7777, predeterminado: 1)</translation>
     </message>
     <message>
         <location filename="../dashstrings.cpp" line="130"/>
@@ -4720,8 +4720,8 @@ Si el archivo no existe, créelo con permiso de lectura solamente del propietari
     </message>
     <message>
         <location filename="../dashstrings.cpp" line="276"/>
-        <source>Listen for connections on &lt;port&gt; (default: 9999 or testnet: 19999)</source>
-        <translation>Escuchar las conexiones en &lt;port&gt; (por defecto: 9999 o testnet: 19999)</translation>
+        <source>Listen for connections on &lt;port&gt; (default: 7777 or testnet: 19999)</source>
+        <translation>Escuchar las conexiones en &lt;port&gt; (por defecto: 7777 o testnet: 19999)</translation>
     </message>
     <message>
         <location filename="../dashstrings.cpp" line="277"/>

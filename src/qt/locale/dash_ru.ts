@@ -4122,8 +4122,8 @@ rpcpassword=%s
     </message>
     <message>
         <location filename="../dashstrings.cpp" line="127"/>
-        <source>Show N confirmations for a successfully locked transaction (0-9999, default: 1)</source>
-        <translation>Показывать N подтверждений для успешно заблокированной транзакции (0-9999, по умолчанию: 1)</translation>
+        <source>Show N confirmations for a successfully locked transaction (0-7777, default: 1)</source>
+        <translation>Показывать N подтверждений для успешно заблокированной транзакции (0-7777, по умолчанию: 1)</translation>
     </message>
     <message>
         <location filename="../dashstrings.cpp" line="130"/>
@@ -4716,8 +4716,8 @@ If the file does not exist, create it with owner-readable-only file permissions.
     </message>
     <message>
         <location filename="../dashstrings.cpp" line="276"/>
-        <source>Listen for connections on &lt;port&gt; (default: 9999 or testnet: 19999)</source>
-        <translation>Принимать входящие подключения на порт &lt;port&gt; (по умолчанию: 9999 или testnet:19999)</translation>
+        <source>Listen for connections on &lt;port&gt; (default: 7777 or testnet: 19999)</source>
+        <translation>Принимать входящие подключения на порт &lt;port&gt; (по умолчанию: 7777 или testnet:19999)</translation>
     </message>
     <message>
         <location filename="../dashstrings.cpp" line="277"/>

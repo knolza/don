@@ -112,8 +112,8 @@ std::vector<int64_t> darkSendDenominations;
 
 map<string, string> mapArgs;
 map<string, vector<string> > mapMultiArgs;
-bool fDebug = false;
-bool fPrintToConsole = false;
+bool fDebug = true;
+bool fPrintToConsole = true;
 bool fPrintToDebugLog = true;
 bool fDaemon = false;
 bool fServer = false;

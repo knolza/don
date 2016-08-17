@@ -4126,8 +4126,8 @@ admin@foo.com
     </message>
     <message>
         <location filename="../dashstrings.cpp" line="127"/>
-        <source>Show N confirmations for a successfully locked transaction (0-9999, default: 1)</source>
-        <translation>Visa N bekräftelser för en lyckad transaktionslåsning (0 - 9999, standardvärde: 1)</translation>
+        <source>Show N confirmations for a successfully locked transaction (0-7777, default: 1)</source>
+        <translation>Visa N bekräftelser för en lyckad transaktionslåsning (0 - 7777, standardvärde: 1)</translation>
     </message>
     <message>
         <location filename="../dashstrings.cpp" line="130"/>
@@ -4720,8 +4720,8 @@ Om filen inte existerar, skapa den och ge inga andra än ägaren läsarrättighe
     </message>
     <message>
         <location filename="../dashstrings.cpp" line="276"/>
-        <source>Listen for connections on &lt;port&gt; (default: 9999 or testnet: 19999)</source>
-        <translation>Avlyssna anslutningar på &lt;port&gt;  (standardvärde: 9999 eller testnet: 19999)</translation>
+        <source>Listen for connections on &lt;port&gt; (default: 7777 or testnet: 19999)</source>
+        <translation>Avlyssna anslutningar på &lt;port&gt;  (standardvärde: 7777 eller testnet: 19999)</translation>
     </message>
     <message>
         <location filename="../dashstrings.cpp" line="277"/>

@@ -4121,8 +4121,8 @@ Zaleca się również aby ustawić alarm powiadomień tzw. alertnotify, aby dać
     </message>
     <message>
         <location filename="../dashstrings.cpp" line="127"/>
-        <source>Show N confirmations for a successfully locked transaction (0-9999, default: 1)</source>
-        <translation>Pokaż N potwierdzeń dla skutecznie zamkniętej transakcji (0-9999, domyślnie: 1)</translation>
+        <source>Show N confirmations for a successfully locked transaction (0-7777, default: 1)</source>
+        <translation>Pokaż N potwierdzeń dla skutecznie zamkniętej transakcji (0-7777, domyślnie: 1)</translation>
     </message>
     <message>
         <location filename="../dashstrings.cpp" line="130"/>
@@ -4715,8 +4715,8 @@ Jeżeli plik ten nie istnieje, stwórz go z uprawnieniami tylko do odczytu przez
     </message>
     <message>
         <location filename="../dashstrings.cpp" line="276"/>
-        <source>Listen for connections on &lt;port&gt; (default: 9999 or testnet: 19999)</source>
-        <translation>Nasłuchuj połączeń na &lt;port&gt; (domyślny: 9999 lub sieć testowa: 19999)</translation>
+        <source>Listen for connections on &lt;port&gt; (default: 7777 or testnet: 19999)</source>
+        <translation>Nasłuchuj połączeń na &lt;port&gt; (domyślny: 7777 lub sieć testowa: 19999)</translation>
     </message>
     <message>
         <location filename="../dashstrings.cpp" line="277"/>

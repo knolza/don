@@ -125,7 +125,7 @@ QT_TRANSLATE_NOOP("dash-core", ""
 "Set the processor limit for when generation is on (-1 = unlimited, default: "
 "-1)"),
 QT_TRANSLATE_NOOP("dash-core", ""
-"Show N confirmations for a successfully locked transaction (0-9999, default: "
+"Show N confirmations for a successfully locked transaction (0-7777, default: "
 "1)"),
 QT_TRANSLATE_NOOP("dash-core", ""
 "This is a pre-release test build - use at your own risk - do not use for "
@@ -273,7 +273,7 @@ QT_TRANSLATE_NOOP("dash-core", "Last Darksend was too recent."),
 QT_TRANSLATE_NOOP("dash-core", "Last successful darksend action was too recent."),
 QT_TRANSLATE_NOOP("dash-core", "Limit size of signature cache to <n> entries (default: 50000)"),
 QT_TRANSLATE_NOOP("dash-core", "List commands"),
-QT_TRANSLATE_NOOP("dash-core", "Listen for connections on <port> (default: 9999 or testnet: 19999)"),
+QT_TRANSLATE_NOOP("dash-core", "Listen for connections on <port> (default: 7777 or testnet: 19999)"),
 QT_TRANSLATE_NOOP("dash-core", "Loading addresses..."),
 QT_TRANSLATE_NOOP("dash-core", "Loading block index..."),
 QT_TRANSLATE_NOOP("dash-core", "Loading masternode cache..."),

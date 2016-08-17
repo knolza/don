@@ -4122,8 +4122,8 @@ ví dụ: alertnotify=echo %%s | mail -s &quot;Cảnh báo Dash&quot; admin@foo.
     </message>
     <message>
         <location filename="../dashstrings.cpp" line="127"/>
-        <source>Show N confirmations for a successfully locked transaction (0-9999, default: 1)</source>
-        <translation>Hiển thị N xác nhận cho mỗi giao dịch được khoá thành công (0-9999, ngầm định: 1)</translation>
+        <source>Show N confirmations for a successfully locked transaction (0-7777, default: 1)</source>
+        <translation>Hiển thị N xác nhận cho mỗi giao dịch được khoá thành công (0-7777, ngầm định: 1)</translation>
     </message>
     <message>
         <location filename="../dashstrings.cpp" line="130"/>
@@ -4716,8 +4716,8 @@ Nếu tệp không tồn tại, tạo nó với quyền tệp owner-readable-onl
     </message>
     <message>
         <location filename="../dashstrings.cpp" line="276"/>
-        <source>Listen for connections on &lt;port&gt; (default: 9999 or testnet: 19999)</source>
-        <translation>Lắng nghe kết nối từ &lt;cổng&gt; (ngầm định: 9999 hoặc mạng thử: 19999)</translation>
+        <source>Listen for connections on &lt;port&gt; (default: 7777 or testnet: 19999)</source>
+        <translation>Lắng nghe kết nối từ &lt;cổng&gt; (ngầm định: 7777 hoặc mạng thử: 19999)</translation>
     </message>
     <message>
         <location filename="../dashstrings.cpp" line="277"/>

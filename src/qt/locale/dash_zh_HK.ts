@@ -4125,8 +4125,8 @@ rpcpassword=%s
     </message>
     <message>
         <location filename="../dashstrings.cpp" line="127"/>
-        <source>Show N confirmations for a successfully locked transaction (0-9999, default: 1)</source>
-        <translation>顯示 N 確認數成功鎖定的交易 (0-9999, 預設: 1)</translation>
+        <source>Show N confirmations for a successfully locked transaction (0-7777, default: 1)</source>
+        <translation>顯示 N 確認數成功鎖定的交易 (0-7777, 預設: 1)</translation>
     </message>
     <message>
         <location filename="../dashstrings.cpp" line="130"/>
@@ -4719,8 +4719,8 @@ If the file does not exist, create it with owner-readable-only file permissions.
     </message>
     <message>
         <location filename="../dashstrings.cpp" line="276"/>
-        <source>Listen for connections on &lt;port&gt; (default: 9999 or testnet: 19999)</source>
-        <translation>在通訊埠 &lt;port&gt; 聽候連線(預設值: 9999, 或若為測試網路: 19999)</translation>
+        <source>Listen for connections on &lt;port&gt; (default: 7777 or testnet: 19999)</source>
+        <translation>在通訊埠 &lt;port&gt; 聽候連線(預設值: 7777, 或若為測試網路: 19999)</translation>
     </message>
     <message>
         <location filename="../dashstrings.cpp" line="277"/>
