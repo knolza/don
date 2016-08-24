@@ -63,7 +63,7 @@ public:
 };
 
 /**
- * Dash RPC command dispatcher.
+ * Gamblr RPC command dispatcher.
  */
 class CRPCTable
 {

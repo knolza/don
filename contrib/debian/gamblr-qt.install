@@ -1,0 +1,6 @@
+usr/local/bin/gamblr-qt usr/bin
+share/pixmaps/gamblr32.xpm usr/share/pixmaps
+share/pixmaps/gamblr16.xpm usr/share/pixmaps
+share/pixmaps/gamblr128.png usr/share/pixmaps
+debian/gamblr-qt.desktop usr/share/applications
+debian/gamblr-qt.protocol usr/share/kde4/services/

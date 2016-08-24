@@ -1,4 +1,4 @@
-#include "dash-config.h"
+#include "gamblr-config.h"
 #include <cstddef>
 #include <sys/select.h>
 

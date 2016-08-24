@@ -65,7 +65,7 @@ public slots:
     void showConsole();
     /** Switch to network tab and show */
     void showNetwork();
-    /** Open external (default) editor with dash.conf */
+    /** Open external (default) editor with gamblr.conf */
     void showConfEditor();	
 
 signals:

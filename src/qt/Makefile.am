@@ -5,41 +5,41 @@ AM_CPPFLAGS += -I$(top_srcdir)/src \
   -I$(top_builddir)/src/qt/forms \
   $(PROTOBUF_CFLAGS) \
   $(QR_CFLAGS)
-bin_PROGRAMS = dash-qt
-noinst_LIBRARIES = libdashqt.a
+bin_PROGRAMS = gamblr-qt
+noinst_LIBRARIES = libgamblrqt.a
 SUBDIRS = . $(BUILD_TEST_QT)
 DIST_SUBDIRS = . test
 
-# dash qt core #
+# gamblr qt core #
 QT_TS = \
-  locale/dash_bar.ts \
-  locale/dash_bg.ts \
-  locale/dash_ca.ts \
-  locale/dash_cmn.ts \
-  locale/dash_cs.ts \
-  locale/dash_da.ts \
-  locale/dash_de.ts \
-  locale/dash_el.ts \
-  locale/dash_en.ts \
-  locale/dash_eo.ts \
-  locale/dash_es.ts \
-  locale/dash_fi.ts \
-  locale/dash_fr.ts \
-  locale/dash_hu_HU.ts \
-  locale/dash_it.ts \
-  locale/dash_lv_LV.ts \
-  locale/dash_nb.ts \
-  locale/dash_nl.ts \
-  locale/dash_pl.ts \
-  locale/dash_pt.ts \
-  locale/dash_pt_BR.ts \
-  locale/dash_ru.ts \
-  locale/dash_sk.ts \
-  locale/dash_sv.ts \
-  locale/dash_tr.ts \
-  locale/dash_vi.ts \
-  locale/dash_zh_CN.ts \
-  locale/dash_zh_HK.ts
+  locale/gamblr_bar.ts \
+  locale/gamblr_bg.ts \
+  locale/gamblr_ca.ts \
+  locale/gamblr_cmn.ts \
+  locale/gamblr_cs.ts \
+  locale/gamblr_da.ts \
+  locale/gamblr_de.ts \
+  locale/gamblr_el.ts \
+  locale/gamblr_en.ts \
+  locale/gamblr_eo.ts \
+  locale/gamblr_es.ts \
+  locale/gamblr_fi.ts \
+  locale/gamblr_fr.ts \
+  locale/gamblr_hu_HU.ts \
+  locale/gamblr_it.ts \
+  locale/gamblr_lv_LV.ts \
+  locale/gamblr_nb.ts \
+  locale/gamblr_nl.ts \
+  locale/gamblr_pl.ts \
+  locale/gamblr_pt.ts \
+  locale/gamblr_pt_BR.ts \
+  locale/gamblr_ru.ts \
+  locale/gamblr_sk.ts \
+  locale/gamblr_sv.ts \
+  locale/gamblr_tr.ts \
+  locale/gamblr_vi.ts \
+  locale/gamblr_zh_CN.ts \
+  locale/gamblr_zh_HK.ts
 
 QT_FORMS_UI = \
   forms/aboutdialog.ui \
@@ -112,13 +112,13 @@ BITCOIN_MM = \
   macnotificationhandler.mm
 
 QT_MOC = \
-  dash.moc \
+  gamblr.moc \
   intro.moc \
   overviewpage.moc \
   rpcconsole.moc
 
-QT_QRC_CPP = qrc_dash.cpp
-QT_QRC = dash.qrc
+QT_QRC_CPP = qrc_gamblr.cpp
+QT_QRC = gamblr.qrc
 
 PROTOBUF_CC = paymentrequest.pb.cc
 PROTOBUF_H = paymentrequest.pb.h
@@ -226,7 +226,7 @@ RES_ICONS = \
 
 
 BITCOIN_QT_CPP = \
-  dash.cpp \
+  gamblr.cpp \
   bitcoinaddressvalidator.cpp \
   bitcoinamountfield.cpp \
   bitcoingui.cpp \
@@ -283,7 +283,7 @@ RES_IMAGES = \
   res/images/about.png \
   res/images/splash.png \
   res/images/splash_testnet.png \
-  res/images/dash_logo_horizontal.png \
+  res/images/gamblr_logo_horizontal.png \
   res/images/drkblue_downArrow.png \
   res/images/drkblue_downArrow_small.png \
   res/images/drkblue_upArrow_small.png \
@@ -296,40 +296,40 @@ RES_CSS = \
   
 RES_MOVIES = $(wildcard res/movies/spinner-*.png)
 
-DASH_RC = res/dash-qt-res.rc
+GAMBLR_RC = res/gamblr-qt-res.rc
 
-libdashqt_a_CPPFLAGS = $(AM_CPPFLAGS) $(QT_INCLUDES) \
+libgamblrqt_a_CPPFLAGS = $(AM_CPPFLAGS) $(QT_INCLUDES) \
   -I$(top_srcdir)/src/qt/forms $(QT_DBUS_INCLUDES)
-libdashqt_a_SOURCES = $(BITCOIN_QT_CPP) $(BITCOIN_QT_H) $(QT_FORMS_UI) \
+libgamblrqt_a_SOURCES = $(BITCOIN_QT_CPP) $(BITCOIN_QT_H) $(QT_FORMS_UI) \
   $(QT_QRC) $(QT_TS) $(PROTOBUF_PROTO) $(RES_ICONS) $(RES_IMAGES) $(RES_MOVIES) $(RES_CSS)
 
-nodist_libdashqt_a_SOURCES = $(QT_MOC_CPP) $(QT_MOC) $(PROTOBUF_CC) \
+nodist_libgamblrqt_a_SOURCES = $(QT_MOC_CPP) $(QT_MOC) $(PROTOBUF_CC) \
   $(PROTOBUF_H) $(QT_QRC_CPP)
 
-BUILT_SOURCES = $(nodist_libdashqt_a_SOURCES)
+BUILT_SOURCES = $(nodist_libgamblrqt_a_SOURCES)
 
 #Generating these with a half-written protobuf header leads to wacky results.
 #This makes sure it's done.
 $(QT_MOC): $(PROTOBUF_H)
 $(QT_MOC_CPP): $(PROTOBUF_H)
 
-# dash-qt binary #
-dash_qt_CPPFLAGS = $(AM_CPPFLAGS) $(QT_INCLUDES) \
+# gamblr-qt binary #
+gamblr_qt_CPPFLAGS = $(AM_CPPFLAGS) $(QT_INCLUDES) \
   -I$(top_srcdir)/src/qt/forms
-dash_qt_SOURCES = dash.cpp
+gamblr_qt_SOURCES = gamblr.cpp
 if TARGET_DARWIN
-  dash_qt_SOURCES += $(BITCOIN_MM)
+  gamblr_qt_SOURCES += $(BITCOIN_MM)
 endif
 if TARGET_WINDOWS
-  dash_qt_SOURCES += $(DASH_RC)
+  gamblr_qt_SOURCES += $(GAMBLR_RC)
 endif
-dash_qt_LDADD = libdashqt.a $(LIBBITCOIN_SERVER)
+gamblr_qt_LDADD = libgamblrqt.a $(LIBBITCOIN_SERVER)
 if ENABLE_WALLET
-dash_qt_LDADD += $(LIBBITCOIN_WALLET)
+gamblr_qt_LDADD += $(LIBBITCOIN_WALLET)
 endif
-dash_qt_LDADD += $(LIBBITCOIN_CLI) $(LIBBITCOIN_COMMON) $(LIBLEVELDB) $(LIBMEMENV) \
+gamblr_qt_LDADD += $(LIBBITCOIN_CLI) $(LIBBITCOIN_COMMON) $(LIBLEVELDB) $(LIBMEMENV) \
   $(BOOST_LIBS) $(QT_LIBS) $(QT_DBUS_LIBS) $(QR_LIBS) $(PROTOBUF_LIBS) $(BDB_LIBS)
-dash_qt_LDFLAGS = $(QT_LDFLAGS)
+gamblr_qt_LDFLAGS = $(QT_LDFLAGS)
 
 # forms/foo.h -> forms/ui_foo.h
 QT_FORMS_H=$(join $(dir $(QT_FORMS_UI)),$(addprefix ui_, $(notdir $(QT_FORMS_UI:.ui=.h))))
@@ -340,15 +340,15 @@ QT_QM=$(QT_TS:.ts=.qm)
 .PHONY: FORCE
 .SECONDARY: $(QT_QM)
 
-dashstrings.cpp: FORCE
-	$(MAKE) -C $(top_srcdir)/src qt/dashstrings.cpp
+gamblrstrings.cpp: FORCE
+	$(MAKE) -C $(top_srcdir)/src qt/gamblrstrings.cpp
 
-translate: dashstrings.cpp $(QT_FORMS_UI) $(QT_FORMS_UI) $(BITCOIN_QT_CPP) $(BITCOIN_QT_H) $(BITCOIN_MM)
+translate: gamblrstrings.cpp $(QT_FORMS_UI) $(QT_FORMS_UI) $(BITCOIN_QT_CPP) $(BITCOIN_QT_H) $(BITCOIN_MM)
 	@test -n $(LUPDATE) || echo "lupdate is required for updating translations"
-	@QT_SELECT=$(QT_SELECT) $(LUPDATE) $^ -locations relative -no-obsolete -ts locale/dash_en.ts
+	@QT_SELECT=$(QT_SELECT) $(LUPDATE) $^ -locations relative -no-obsolete -ts locale/gamblr_en.ts
 
 $(QT_QRC_CPP): $(QT_QRC) $(QT_QM) $(QT_FORMS_H) $(RES_ICONS) $(RES_IMAGES) $(RES_MOVIES) $(RES_CSS) $(PROTOBUF_H)
-	@cd $(abs_srcdir); test -f $(RCC) && QT_SELECT=$(QT_SELECT) $(RCC) -name dash -o $(abs_builddir)/$@ $< || \
+	@cd $(abs_srcdir); test -f $(RCC) && QT_SELECT=$(QT_SELECT) $(RCC) -name gamblr -o $(abs_builddir)/$@ $< || \
 	  echo error: could not build $@
 	$(SED) -e '/^\*\*.*Created:/d' $@ > $@.n && mv $@{.n,}
 	$(SED) -e '/^\*\*.*by:/d' $@  > $@.n && mv $@{.n,}

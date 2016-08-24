@@ -3,27 +3,27 @@ include Makefile.include
 AM_CPPFLAGS += -I$(builddir)
 
 noinst_LIBRARIES = \
-  libdash_server.a \
-  libdash_common.a \
-  libdash_cli.a
+  libgamblr_server.a \
+  libgamblr_common.a \
+  libgamblr_cli.a
 if ENABLE_WALLET
-noinst_LIBRARIES += libdash_wallet.a
+noinst_LIBRARIES += libgamblr_wallet.a
 endif
 
 bin_PROGRAMS =
 
 if BUILD_BITCOIND
-  bin_PROGRAMS += dashd
+  bin_PROGRAMS += gamblrd
 endif
 
 if BUILD_BITCOIN_CLI
-  bin_PROGRAMS += dash-cli
+  bin_PROGRAMS += gamblr-cli
 endif
 
 SUBDIRS = . $(BUILD_QT) $(BUILD_TEST)
 DIST_SUBDIRS = . qt test
 .PHONY: FORCE
-# dash core #
+# gamblr core #
 BITCOIN_CORE_H = \
   activemasternode.h \
   addrman.h \
@@ -109,7 +109,7 @@ obj/build.h: FORCE
 	  $(abs_top_srcdir)
 version.o: obj/build.h
 
-libdash_server_a_SOURCES = \
+libgamblr_server_a_SOURCES = \
   activemasternode.cpp \
   addrman.cpp \
   alert.cpp \
@@ -135,7 +135,7 @@ libdash_server_a_SOURCES = \
   $(JSON_H) \
   $(BITCOIN_CORE_H)
 
-libdash_wallet_a_SOURCES = \
+libgamblr_wallet_a_SOURCES = \
   activemasternode.cpp \
   db.cpp \
   crypter.cpp \
@@ -146,7 +146,7 @@ libdash_wallet_a_SOURCES = \
   keepass.cpp \
   $(BITCOIN_CORE_H)
 
-libdash_common_a_SOURCES = \
+libgamblr_common_a_SOURCES = \
   activemasternode.cpp \
   base58.cpp \
   allocators.cpp \
@@ -184,47 +184,47 @@ libdash_common_a_SOURCES = \
   $(BITCOIN_CORE_H)
 
 if GLIBC_BACK_COMPAT
-libdash_common_a_SOURCES += compat/glibc_compat.cpp
-libdash_common_a_SOURCES += compat/glibcxx_compat.cpp
+libgamblr_common_a_SOURCES += compat/glibc_compat.cpp
+libgamblr_common_a_SOURCES += compat/glibcxx_compat.cpp
 endif
 
-libdash_cli_a_SOURCES = \
+libgamblr_cli_a_SOURCES = \
   rpcclient.cpp \
   $(BITCOIN_CORE_H)
 
-nodist_libdash_common_a_SOURCES = $(top_srcdir)/src/obj/build.h
+nodist_libgamblr_common_a_SOURCES = $(top_srcdir)/src/obj/build.h
 #
 
-# dashd binary #
-dashd_LDADD = \
-  libdash_server.a \
-  libdash_cli.a \
-  libdash_common.a \
+# gamblrd binary #
+gamblrd_LDADD = \
+  libgamblr_server.a \
+  libgamblr_cli.a \
+  libgamblr_common.a \
   $(LIBLEVELDB) \
   $(LIBMEMENV)
 if ENABLE_WALLET
-dashd_LDADD += libdash_wallet.a
+gamblrd_LDADD += libgamblr_wallet.a
 endif
-dashd_SOURCES = dashd.cpp
+gamblrd_SOURCES = gamblrd.cpp
 #
 
 if TARGET_WINDOWS
-dashd_SOURCES += dashd-res.rc
+gamblrd_SOURCES += gamblrd-res.rc
 endif
 
 AM_CPPFLAGS += $(BDB_CPPFLAGS)
-dashd_LDADD += $(BOOST_LIBS) $(BDB_LIBS)
+gamblrd_LDADD += $(BOOST_LIBS) $(BDB_LIBS)
 
-# dash-cli binary #
-dash_cli_LDADD = \
-  libdash_cli.a \
-  libdash_common.a \
+# gamblr-cli binary #
+gamblr_cli_LDADD = \
+  libgamblr_cli.a \
+  libgamblr_common.a \
   $(BOOST_LIBS)
-dash_cli_SOURCES = dash-cli.cpp
+gamblr_cli_SOURCES = gamblr-cli.cpp
 #
 
 if TARGET_WINDOWS
-dash_cli_SOURCES += dash-cli-res.rc
+gamblr_cli_SOURCES += gamblr-cli-res.rc
 endif
 
 # NOTE: This dependency is not strictly necessary, but without it make may try to build both in parallel, which breaks the LevelDB build system in a race
@@ -235,7 +235,7 @@ leveldb/%.a:
 	  CC="$(CC)" PLATFORM=$(TARGET_OS) AR="$(AR)" $(LEVELDB_TARGET_FLAGS) \
 	  OPT="$(CXXFLAGS) $(CPPFLAGS)"
 
-qt/dashstrings.cpp: $(libdash_server_a_SOURCES) $(libdash_common_a_SOURCES) $(libdash_cli_a_SOURCES)
+qt/gamblrstrings.cpp: $(libgamblr_server_a_SOURCES) $(libgamblr_common_a_SOURCES) $(libgamblr_cli_a_SOURCES)
 	@test -n $(XGETTEXT) || echo "xgettext is required for updating translations"
 	@cd $(top_srcdir); XGETTEXT=$(XGETTEXT) share/qt/extract_strings_qt.py
 

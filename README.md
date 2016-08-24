@@ -1,37 +1,37 @@
-Dash Core staging tree 0.11
+Gamblr Core staging tree 0.11
 ===============================
 
-http://www.dashpay.io
+http://www.gamblrpay.io
 
 Copyright (c) 2009-2015 Bitcoin Core Developers
 
-Copyright (c) 2014-2015 Dash Core Developers
+Copyright (c) 2014-2015 Gamblr Core Developers
 
 
-What is Dash?
+What is Gamblr?
 ----------------
 
-Dash is an experimental new digital currency that enables anonymous, instant
-payments to anyone, anywhere in the world. Dash uses peer-to-peer technology
+Gamblr is an experimental new digital currency that enables anonymous, instant
+payments to anyone, anywhere in the world. Gamblr uses peer-to-peer technology
 to operate with no central authority: managing transactions and issuing money
-are carried out collectively by the network. Dash Core is the name of open
+are carried out collectively by the network. Gamblr Core is the name of open
 source software which enables the use of this currency.
 
 For more information, as well as an immediately useable, binary version of
-the Dash Core software, see http://www.dashpay.io/downloads.
+the Gamblr Core software, see http://www.gamblrpay.io/downloads.
 
 
 License
 -------
 
-Dash Core is released under the terms of the MIT license. See [COPYING](COPYING) for more
+Gamblr Core is released under the terms of the MIT license. See [COPYING](COPYING) for more
 information or see http://opensource.org/licenses/MIT.
 
 
 Building process
 -----------------
 
-**compiling Dash from git**
+**compiling Gamblr from git**
 
 Use the autogen script to prepare the build environment.
 
@@ -42,7 +42,7 @@ Use the autogen script to prepare the build environment.
 **precompiled binaries**
 
 Precompiled binaries are available at github, see
-https://github.com/dashproject/dash-binaries
+https://github.com/gamblrproject/gamblr-binaries
 
 Always verify the signatures and checksums.
 
@@ -68,7 +68,7 @@ to see it.
 
 **testnet and regtest modes**
 
-Run with the -testnet option to run with "play dashs" on the test network, if you
+Run with the -testnet option to run with "play gamblrs" on the test network, if you
 are testing multi-machine code that needs to operate across the internet.
 
 If you are testing something that can run on one machine, run with the -regtest option.
@@ -77,7 +77,7 @@ that run in -regtest mode.
 
 **DEBUG_LOCKORDER**
 
-Dash Core is a multithreaded application, and deadlocks or other multithreading bugs
+Gamblr Core is a multithreaded application, and deadlocks or other multithreading bugs
 can be very difficult to track down. Compiling with -DDEBUG_LOCKORDER (configure
 CXXFLAGS="-DDEBUG_LOCKORDER -g") inserts run-time checks to keep track of what locks
 are held, and adds warning to the debug.log file if inconsistencies are detected.

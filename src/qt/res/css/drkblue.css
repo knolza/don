@@ -649,16 +649,16 @@ QDialog#HelpMessageDialog QScrollBar:vertical, QDialog#HelpMessageDialog QScroll
 border:0;
 }
 
-/* About Dash Dialog */
+/* About Gamblr Dialog */
 QDialog#AboutDialog {
 background-color:#F8F6F6;
 }
 
-QDialog#AboutDialog QLabel#label, QDialog#AboutDialog QLabel#copyrightLabel, QDialog#AboutDialog QLabel#label_2 { /* About Dash Contents */
+QDialog#AboutDialog QLabel#label, QDialog#AboutDialog QLabel#copyrightLabel, QDialog#AboutDialog QLabel#label_2 { /* About Gamblr Contents */
 margin-left:10px;
 }
 
-QDialog#AboutDialog QLabel#label_2 { /* Margin for About Dash text */
+QDialog#AboutDialog QLabel#label_2 { /* Margin for About Gamblr text */
 margin-right:10px;
 }
 
@@ -949,7 +949,7 @@ QWidget .QFrame#frame_2 { /* Transactions Widget */
 min-width:410px;
 margin-right:20px;
 margin-left:0;
-background-image: url(':/images/dash_logo_horizontal');
+background-image: url(':/images/gamblr_logo_horizontal');
 background-repeat:none;
 }
 
