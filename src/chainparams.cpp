@@ -57,7 +57,7 @@ genesis hash: 00000e75b4ff10d0d382c3d01952fed471f4c2d9047d4c9a6eefb4a4aa826ad2
 
 화폐단위: CHP(CHIP)
 
-base58Prefixes[PUBKEY_ADDRESS] = list_of( 11);                    // Gamblr addresses start with 'C'
+base58Prefixes[PUBKEY_ADDRESS] = list_of( 80);                    // Gamblr addresses start with 'Z'
 base58Prefixes[SCRIPT_ADDRESS] = list_of( 06);                    // Gamblr script addresses start with '7'
 base58Prefixes[SECRET_KEY] =     list_of(204w);                    // Gamblr private keys start with '7' or 'C'
 base58Prefixes[EXT_PUBLIC_KEY] = list_of(35)(40)(47)(53);         // Gamblr BIP32 pubkeys start with 'chpv'
@@ -114,7 +114,7 @@ public:
         vSeeds.push_back(CDNSSeedData("gamblr.ga", "dnsseed.gamblr.ga"));
         vSeeds.push_back(CDNSSeedData("gamblr.gq", "dnsseed.gamblr.gq"));
 
-        base58Prefixes[PUBKEY_ADDRESS] = list_of( 76);                    // Gamblr addresses start with 'X'
+        base58Prefixes[PUBKEY_ADDRESS] = list_of( 80);                    // Gamblr addresses start with 'Z'
         base58Prefixes[SCRIPT_ADDRESS] = list_of( 16);                    // Gamblr script addresses start with '7'
         base58Prefixes[SECRET_KEY] =     list_of(204);                    // Gamblr private keys start with '7' or 'X'
         base58Prefixes[EXT_PUBLIC_KEY] = list_of(0x02)(0xFE)(0x52)(0xF8); // Gamblr BIP32 pubkeys start with 'drkv'
