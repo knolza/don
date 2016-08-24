@@ -71,7 +71,7 @@ OptionsDialog::OptionsDialog(QWidget *parent) :
     /* Display elements init */
     
     /* Theme selector */
-    ui->theme->addItem(QString("Gamblr-blue"), QVariant("drkblue"));
+    ui->theme->addItem(QString("Gamblr-red"), QVariant("drkblue"));
     ui->theme->addItem(QString("Gamblr-traditional"), QVariant("trad"));
 
     
