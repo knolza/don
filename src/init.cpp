@@ -1213,15 +1213,15 @@ bool AppInit2(boost::thread_group& threadGroup)
         nDarksendRounds = 99999;
     }
 
-    nAnonymizeDarkcoinAmount = GetArg("-anonymizegamblramount", 0);
-    if(nAnonymizeDarkcoinAmount > 999999) nAnonymizeDarkcoinAmount = 999999;
-    if(nAnonymizeDarkcoinAmount < 2) nAnonymizeDarkcoinAmount = 2;
+    nAnonymizeGamblrAmount = GetArg("-anonymizegamblramount", 0);
+    if(nAnonymizeGamblrAmount > 999999) nAnonymizeGamblrAmount = 999999;
+    if(nAnonymizeGamblrAmount < 2) nAnonymizeGamblrAmount = 2;
 
     bool fEnableInstantX = GetBoolArg("-enableinstantx", true);
     if(fEnableInstantX){
         nInstantXDepth = GetArg("-instantxdepth", 5);
         if(nInstantXDepth > 60) nInstantXDepth = 60;
-        if(nInstantXDepth < 0) nAnonymizeDarkcoinAmount = 0;
+        if(nInstantXDepth < 0) nAnonymizeGamblrAmount = 0;
     } else {
         nInstantXDepth = 0;
     }
@@ -1235,7 +1235,7 @@ bool AppInit2(boost::thread_group& threadGroup)
     LogPrintf("fLiteMode %d\n", fLiteMode);
     LogPrintf("nInstantXDepth %d\n", nInstantXDepth);
     LogPrintf("Darksend rounds %d\n", nDarksendRounds);
-    LogPrintf("Anonymize Gamblr Amount %d\n", nAnonymizeDarkcoinAmount);
+    LogPrintf("Anonymize Gamblr Amount %d\n", nAnonymizeGamblrAmount);
 
     /* Denominations
 

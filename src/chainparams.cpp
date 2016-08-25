@@ -178,16 +178,6 @@ public:
 
         vFixedSeeds.clear();
         vSeeds.clear();
-        /*
-          vSeeds.push_back(CDNSSeedData("gamblrpay.io", "testnet-seed.gamblrpay.io"));
-          vSeeds.push_back(CDNSSeedData("gamblr.qa", "testnet-seed.gamblr.qa"));
-        */
-        //legacy seeders
-        /*
-        vSeeds.push_back(CDNSSeedData("darkcoin.qa", "testnet-seed.darkcoin.qa"));
-        vSeeds.push_back(CDNSSeedData("masternode.io", "test.dnsseed.masternode.io"));
-        vSeeds.push_back(CDNSSeedData("darkcoin.io",  "testnet-seed.darkcoin.io"));
-        */
 
         vSeeds.push_back(CDNSSeedData("gamblr.cf", "dnsseed.gamblr.cf"));
         vSeeds.push_back(CDNSSeedData("gamblr.tk", "dnsseed.gamblr.tk"));

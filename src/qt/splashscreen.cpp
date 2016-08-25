@@ -22,8 +22,8 @@ SplashScreen::SplashScreen(const QPixmap &pixmap, Qt::WindowFlags f, bool isTest
     setAutoFillBackground(true);
 
     // set reference point, paddings
-    int paddingLeft             = 14;
-    int paddingTop              = 470;
+    int paddingLeft             = 160;
+    int paddingTop              = 360;
     int titleVersionVSpace      = 17;
     int titleCopyrightVSpace    = 32;
 
