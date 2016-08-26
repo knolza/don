@@ -23,7 +23,7 @@ SplashScreen::SplashScreen(const QPixmap &pixmap, Qt::WindowFlags f, bool isTest
 
     // set reference point, paddings
     int paddingLeft             = 160;
-    int paddingTop              = 360;
+    int paddingTop              = 400;
     int titleVersionVSpace      = 17;
     int titleCopyrightVSpace    = 32;
 
