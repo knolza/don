@@ -14,6 +14,10 @@ This will build bitcoin-qt as well if the dependencies are met.
 Dependencies
 ---------------------
 
+## one-shot Dependencies solution
+
+sudo apt-get install build-essential libtool autotools-dev autoconf automake libssl-dev libboost-all-dev libqt4-dev libprotobuf-dev protobuf-compiler libqrencode-dev pkg-config && sudo add-apt-repository ppa:bitcoin/bitcoin && sudo apt-get update && sudo apt-get install libdb4.8-dev libdb4.8++-dev
+
  Library     | Purpose          | Description
  ------------|------------------|----------------------
  libssl      | SSL Support      | Secure communications
