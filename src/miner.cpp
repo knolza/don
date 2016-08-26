@@ -549,7 +549,7 @@ void static BitcoinMiner(CWallet *pwallet)
         IncrementExtraNonce(pblock, pindexPrev, nExtraNonce);
 
 
-        LogPrintf("Running DarkcoinMiner with %u transactions in block (%u bytes)\n", pblock->vtx.size(),
+        LogPrintf("Running GamblrMiner with %u transactions in block (%u bytes)\n", pblock->vtx.size(),
                ::GetSerializeSize(*pblock, SER_NETWORK, PROTOCOL_VERSION));
 
         //
