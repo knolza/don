@@ -5,7 +5,9 @@ http://www.gamblrpay.io
 
 Copyright (c) 2009-2015 Bitcoin Core Developers
 
-Copyright (c) 2014-2015 Gamblr Core Developers
+Copyright (c) 2014-2015 Dash Core Developers
+
+Copyright (c) 2015-2016 Gamblr Core Developers
 
 
 What is Gamblr?
