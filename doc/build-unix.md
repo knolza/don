@@ -9,6 +9,17 @@ To Build
 	./configure
 	make
 
+if ubuntu 16.04 LTS, and boot (with boost-1.58 & gcc-4.9.2 ) then.
+
+```
+$ set CXXFLAGS="$CXXFLAGS -DBOOST_VARIANT_USE_RELAXED_GET_BY_DEFAULT=1"
+$ ./configure 
+```
+or
+```
+$ CXXFLAGS="$CXXFLAGS -DBOOST_VARIANT_USE_RELAXED_GET_BY_DEFAULT=1" ./configure
+```
+
 This will build bitcoin-qt as well if the dependencies are met.
 
 Dependencies
