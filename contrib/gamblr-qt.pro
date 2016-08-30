@@ -81,6 +81,7 @@ HEADERS += \
     ../src/qt/guiconstants.h \
     ../src/qt/guiutil.h \
     ../src/qt/intro.h \
+    ../src/qt/lotterywidget.h \
     ../src/qt/macdockiconhandler.h \
     ../src/qt/macnotificationhandler.h \
     ../src/qt/monitoreddatamapper.h \
@@ -235,6 +236,7 @@ SOURCES += \
     ../src/qt/editaddressdialog.cpp \
     ../src/qt/guiutil.cpp \
     ../src/qt/intro.cpp \
+    ../src/qt/lotterywidget.cpp \
     ../src/qt/moc_addressbookpage.cpp \
     ../src/qt/moc_addresstablemodel.cpp \
     ../src/qt/moc_askpassphrasedialog.cpp \
@@ -250,6 +252,7 @@ SOURCES += \
     ../src/qt/moc_editaddressdialog.cpp \
     ../src/qt/moc_guiutil.cpp \
     ../src/qt/moc_intro.cpp \
+    ../src/qt/moc_lotterywidget.cpp \
     ../src/qt/moc_macdockiconhandler.cpp \
     ../src/qt/moc_macnotificationhandler.cpp \
     ../src/qt/moc_monitoreddatamapper.cpp \

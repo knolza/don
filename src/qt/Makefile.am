@@ -78,6 +78,7 @@ QT_MOC_CPP = \
   moc_editaddressdialog.cpp \
   moc_guiutil.cpp \
   moc_intro.cpp \
+  moc_Lotterywidget.cpp \
   moc_macdockiconhandler.cpp \
   moc_macnotificationhandler.cpp \
   moc_monitoreddatamapper.cpp \
@@ -143,6 +144,7 @@ BITCOIN_QT_H = \
   guiconstants.h \
   guiutil.h \
   intro.h \
+  Lotterywidget.h \
   macdockiconhandler.h \
   macnotificationhandler.h \
   monitoreddatamapper.h \
@@ -238,6 +240,7 @@ BITCOIN_QT_CPP = \
   darksendconfig.cpp \
   guiutil.cpp \
   intro.cpp \
+  Lotterywidget.cpp \
   monitoreddatamapper.cpp \
   notificator.cpp \
   optionsdialog.cpp \
