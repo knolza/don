@@ -12,6 +12,7 @@
 #include "optionsmodel.h"
 #include "overviewpage.h"
 #include "receivecoinsdialog.h"
+#include "gamblepagedialog.h"
 #include "sendcoinsdialog.h"
 #include "signverifymessagedialog.h"
 #include "transactiontablemodel.h"
@@ -51,6 +52,8 @@ WalletView::WalletView(QWidget *parent):
     vbox->addLayout(hbox_buttons);
     transactionsPage->setLayout(vbox);
 
+    //gamblePage = new QWidget(this);
+    gamblePage = new GamblePageDialog();
     receiveCoinsPage = new ReceiveCoinsDialog();
     sendCoinsPage = new SendCoinsDialog();
 
@@ -58,6 +61,7 @@ WalletView::WalletView(QWidget *parent):
     addWidget(transactionsPage);
     addWidget(receiveCoinsPage);
     addWidget(sendCoinsPage);
+    addWidget(gamblePage);
 
     // Clicking on a transaction on the overview pre-selects the transaction on the transaction history page
     connect(overviewPage, SIGNAL(transactionClicked(QModelIndex)), transactionView, SLOT(focusTransaction(QModelIndex)));
@@ -112,6 +116,7 @@ void WalletView::setWalletModel(WalletModel *walletModel)
     overviewPage->setWalletModel(walletModel);
     receiveCoinsPage->setModel(walletModel);
     sendCoinsPage->setModel(walletModel);
+    gamblePage->setModel(walletModel);
 
     if (walletModel)
     {
@@ -160,6 +165,11 @@ void WalletView::gotoOverviewPage()
 void WalletView::gotoHistoryPage()
 {
     setCurrentWidget(transactionsPage);
+}
+
+void WalletView::gotoGamblePage()
+{
+    setCurrentWidget(gamblePage);
 }
 
 void WalletView::gotoReceiveCoinsPage()

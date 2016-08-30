@@ -270,6 +270,17 @@ void BitcoinGUI::createActions(bool fIsTestnet)
 #endif
     tabGroup->addAction(historyAction);
 
+    gambleAction = new QAction(QIcon(":/icons/gamble"), tr("&Gambles"), this);
+    gambleAction->setStatusTip(tr("Fun gamble"));
+    gambleAction->setToolTip(gambleAction->statusTip());
+    gambleAction->setCheckable(true);
+#ifdef Q_OS_MAC
+    gambleAction->setShortcut(QKeySequence(Qt::CTRL + Qt::Key_5));
+#else
+    gambleAction->setShortcut(QKeySequence(Qt::ALT + Qt::Key_5));
+#endif
+    tabGroup->addAction(gambleAction);
+
     // These showNormalIfMinimized are needed because Send Coins and Receive Coins
     // can be triggered from the tray menu, and need to show the GUI to be useful.
     connect(overviewAction, SIGNAL(triggered()), this, SLOT(showNormalIfMinimized()));
@@ -280,6 +291,9 @@ void BitcoinGUI::createActions(bool fIsTestnet)
     connect(receiveCoinsAction, SIGNAL(triggered()), this, SLOT(gotoReceiveCoinsPage()));
     connect(historyAction, SIGNAL(triggered()), this, SLOT(showNormalIfMinimized()));
     connect(historyAction, SIGNAL(triggered()), this, SLOT(gotoHistoryPage()));
+
+    connect(gambleAction, SIGNAL(triggered()), this, SLOT(showNormalIfMinimized()));
+    connect(gambleAction, SIGNAL(triggered()), this, SLOT(gotoGamblePage()));
 
     quitAction = new QAction(QIcon(":/icons/quit"), tr("E&xit"), this);
     quitAction->setStatusTip(tr("Quit application"));
@@ -427,6 +441,7 @@ void BitcoinGUI::createToolBars()
         toolbar->addAction(sendCoinsAction);
         toolbar->addAction(receiveCoinsAction);
         toolbar->addAction(historyAction);
+        toolbar->addAction(gambleAction);        
         toolbar->setMovable(false); // remove unused icon in upper left corner
         overviewAction->setChecked(true);
 
@@ -504,6 +519,7 @@ void BitcoinGUI::setWalletActionsEnabled(bool enabled)
     sendCoinsAction->setEnabled(enabled);
     receiveCoinsAction->setEnabled(enabled);
     historyAction->setEnabled(enabled);
+    gambleAction->setEnabled(enabled);
     encryptWalletAction->setEnabled(enabled);
     backupWalletAction->setEnabled(enabled);
     changePassphraseAction->setEnabled(enabled);
@@ -634,6 +650,12 @@ void BitcoinGUI::gotoHistoryPage()
 {
     historyAction->setChecked(true);
     if (walletFrame) walletFrame->gotoHistoryPage();
+}
+
+void BitcoinGUI::gotoGamblePage()
+{
+    gambleAction->setChecked(true);
+    if (walletFrame) walletFrame->gotoGamblePage();
 }
 
 void BitcoinGUI::gotoReceiveCoinsPage()

@@ -336,6 +336,7 @@ FORMS += \
     ../src/qt/forms/sendcoinsdialog.ui \
     ../src/qt/forms/sendcoinsentry.ui \
     ../src/qt/forms/signverifymessagedialog.ui \
+    ../src/qt/forms/gamblepagedialog.ui \
     ../src/qt/forms/transactiondescdialog.ui
 
 RESOURCES += \

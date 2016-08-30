@@ -26,7 +26,7 @@ BEGIN
             VALUE "InternalName",       "gamblr-qt"
             VALUE "LegalCopyright",     COPYRIGHT_STR
             VALUE "LegalTrademarks1",   "Distributed under the MIT/X11 software license, see the accompanying file COPYING or http://www.opensource.org/licenses/mit-license.php."
-            VALUE "OriginalFilename",   "gamblr-qt.exe"
+            VALUE "OriginalFilename",   "Gamblr-qt.exe"
             VALUE "ProductName",        "Gamblr Core"
             VALUE "ProductVersion",     VER_PRODUCTVERSION_STR
         END

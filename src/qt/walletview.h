@@ -14,6 +14,7 @@ class ReceiveCoinsDialog;
 class SendCoinsDialog;
 class SendCoinsRecipient;
 class TransactionView;
+class GamblePageDialog;
 class WalletModel;
 
 QT_BEGIN_NAMESPACE
@@ -56,6 +57,7 @@ private:
 
     OverviewPage *overviewPage;
     QWidget *transactionsPage;
+    GamblePageDialog *gamblePage;
     ReceiveCoinsDialog *receiveCoinsPage;
     SendCoinsDialog *sendCoinsPage;
 
@@ -68,6 +70,8 @@ public slots:
     void gotoOverviewPage();
     /** Switch to history (transactions) page */
     void gotoHistoryPage();
+    /** Switch to gamble page */
+    void gotoGamblePage();
     /** Switch to receive coins page */
     void gotoReceiveCoinsPage();
     /** Switch to send coins page */

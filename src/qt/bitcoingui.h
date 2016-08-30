@@ -77,6 +77,7 @@ private:
     QMenuBar *appMenuBar;
     QAction *overviewAction;
     QAction *historyAction;
+    QAction *gambleAction;
     QAction *quitAction;
     QAction *sendCoinsAction;
     QAction *usedSendingAddressesAction;
@@ -165,6 +166,8 @@ private slots:
     void gotoOverviewPage();
     /** Switch to history (transactions) page */
     void gotoHistoryPage();
+    /** Switch to gamble page */
+    void gotoGamblePage();
     /** Switch to receive coins page */
     void gotoReceiveCoinsPage();
     /** Switch to send coins page */
